@@ -1,0 +1,14 @@
+/* pages/scan/scan.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2 url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/copyright@3x.png') no-repeat center 95%;
+  /* background: #F2F2F2 url(http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Store/img_logo@3x.png) no-repeat center 95%; */
+  background-size: 70% ;
+}
+.scan{
+  padding: 20rpx;
+}
+.scanImage{
+  width: 100%;
+  margin-bottom: 20rpx;
+}

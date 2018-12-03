@@ -1,0 +1,8 @@
+<!--pages/scan/scan.wxml-->
+<view class='scan'>
+  <image class="scanImage"
+  src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/scan_bg@3x.png' mode='widthFix'></image>
+  <button bindtap='scan'>立即扫码</button>
+</view>
+
+

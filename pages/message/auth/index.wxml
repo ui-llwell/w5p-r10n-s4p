@@ -1,0 +1,31 @@
+<view class="page">
+<official-account></official-account>
+    <view class="inner">
+        <view class="image">
+          <view class='userAvatarUrl'>
+            <open-data class="" type="userAvatarUrl"></open-data>
+          </view>
+            <!-- <image src="/static/images/accredit.png"></image> -->
+        </view>
+        <view>
+          <open-data  type="userNickName"></open-data>
+        </view>
+        <block>
+            <block wx:if="{{!close}}">
+                <view class="text">您还没有授权，未授权将会影响小程序正常体验，快去授权信息吧！</view>
+            </block>
+        </block>
+        <block>
+            <block wx:if="{{!close}}">
+                <button bindgetuserinfo="bind" type='primary' class="btn" openType="getUserInfo">
+                <i class="iconfont icon-z-weixin2"></i>
+                点击授权</button>
+            </block>
+        </block>
+        <block>
+            <block wx:if="{{close}}">
+                <view class="text">{{text}}</view>
+            </block>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/subject/subject.wxss */
+.subject{
+  width: 100%;
+}
