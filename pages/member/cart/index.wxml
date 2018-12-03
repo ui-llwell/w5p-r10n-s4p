@@ -153,8 +153,8 @@
                     <view class="center">
                         <view class="empty">
                             <image class="light" src="/static/images/icon/nogoods.png"></image>
-                            <view class="text-cancel">您的购物车中没有商品哦！</view>
-                            <navigator class="btn btn-danger-o" openType="switchTab" url="/pages/index/index">去首页逛逛吧</navigator>
+                            <view class="text-cancel">购物车还是空的呢！</view>
+                            <navigator class="btn btn-danger-o" openType="switchTab" url="/pages/index/index">去挑选商品吧</navigator>
                         </view>
                     </view>
                 </block>
