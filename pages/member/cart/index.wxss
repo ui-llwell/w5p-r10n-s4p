@@ -32,6 +32,9 @@ checkbox {
     width: 280rpx;
     font-size: 30rpx;
     padding: 0;
+    background:red;
+color:#fff;
+
 }
 
 .light {
