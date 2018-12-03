@@ -19,7 +19,7 @@ Page({
       wx.scanCode({
         success: (res) => {
           var send = {
-            code: 2,
+            code: 12,
             barcode: res.result
           };
           let url = 'https://eshop.llwell.net/llback/Scan/SCANGOODSURL'
