@@ -211,8 +211,8 @@ App({
       agent:''
     },
     globalData: {
-      appid: "wx212d522fca71351b",
-      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=2",
+      appid: "wx94b6876b32c9c9f3",
+      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=7",
       approot: "https://eshop.llwell.net/addons/ewei_shopv2/",
         userInfo: null
     }
