@@ -8,12 +8,13 @@ Page({
         page: 1,
         code: !1,
         cancel: e.cancelArray,
-        cancelindex: 0
+        cancelindex: 0,
+        tttimestamp:''
     },
     onLoad: function(a) {
         this.setData({
             options: a,
-            status: a.status || ""
+            status: a.status || "",
         }), t.url(a), this.get_list();
     },
     get_list: function() {
@@ -25,6 +26,48 @@ Page({
             status: t.data.status,
             merchid: 0
         }, function(e) {
+          wx.request({
+            url: 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp',
+            data: '',
+            header: {},
+            method: 'GET',
+            dataType: 'json',
+            responseType: 'text',
+            success: function(res) {
+              // console.log('res',res)
+              wx.setStorageSync('Tmm', res.data.data.t)
+            },
+            fail: function(res) {},
+            complete: function(res) {},
+          })
+          e.list.map((i)=>{
+            let tttime = i.ordersn.substr(2, 14)
+            // console.log('~~~', tttime)
+            // console.log('~~~年', tttime.substr(0, 4))
+            // console.log('~~~月', tttime.substr(4, 2))
+            // console.log('~~~日', tttime.substr(6, 2))
+            // console.log('~~~时', tttime.substr(8, 2))
+            // console.log('~~~分', tttime.substr(10, 2))
+            // console.log('~~~秒', tttime.substr(12, 2))
+            let iTime = new Date(
+              tttime.substr(0, 4),
+              tttime.substr(4, 2) - 1,
+              tttime.substr(6, 2),
+              tttime.substr(8, 2),
+              tttime.substr(10, 2),
+              tttime.substr(12, 2))
+            // console.log('qwqwqwqwqwqw', tttime.substr(4, 2) - 1)
+            // console.log('今天', wx.getStorageSync('Tmm') * 1)
+            // console.log('付款时间', iTime.getTime())
+            i.timeDifference = ( wx.getStorageSync('Tmm') * 1 - iTime.getTime() )/(1000 *60*60*24)
+            // console.log(i.timeDifference)
+            if (i.cancancelrefund == false && i.timeDifference < 7 && i.status == 3 || i.status == 1){
+              i.trefound = true
+              return
+            }
+            return
+          })
+          console.log('esssslist',e.list)
             0 == e.error ? (t.setData({
                 loading: !1,
                 show: !0,

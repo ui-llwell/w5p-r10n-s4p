@@ -137,8 +137,8 @@
                                                             </block>
                                                         </block>
                                                         <block>
-                                                            <block wx:if="{{item.canrefund}}">
-                                                                <navigator class="btn btn-default" openType="navigate" url="/pages/order/refund/index">{{item.refundtext}}</navigator>
+                                                            <block wx:if="{{item.trefound}}">
+                                                                <navigator class="btn btn-default" openType="navigate" url="/pages/order/refund/index?id={{item.id}}">申请售后</navigator>
                                                             </block>
                                                         </block>
                                                         <block>
