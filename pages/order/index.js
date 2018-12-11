@@ -61,11 +61,14 @@ Page({
             // console.log('付款时间', iTime.getTime())
             i.timeDifference = ( wx.getStorageSync('Tmm') * 1 - iTime.getTime() )/(1000 *60*60*24)
             // console.log(i.timeDifference)
-            if (i.cancancelrefund == false && i.timeDifference < 7 && i.status == 3 || i.status == 1){
+            if (i.cancancelrefund == false && i.timeDifference < 7 && (i.status == 3 || i.status == 1)){
               i.trefound = true
               return
+            }else{
+               i.trefound = false
+              return
             }
-            return
+            
           })
           console.log('esssslist',e.list)
             0 == e.error ? (t.setData({
@@ -124,5 +127,16 @@ Page({
     },
     onShareAppMessage: function() {
         return a.onShareAppMessage();
-    }
+    },
+    refundcancel: function (t) {
+      // console.log(t)
+      var that = this;
+      e.refundcancel(t.currentTarget.dataset.orderid, function () {
+        wx.redirectTo({
+          url: '/pages/order/index',
+        })
+      
+      });
+      
+    },
 });

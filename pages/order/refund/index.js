@@ -35,7 +35,12 @@ Page({
         };
         e.post("order/refund/submit", t, function(t) {
             0 == t.error ? wx.navigateBack() : e.toast(t.message, "loading");
+
+          wx.redirectTo({
+            url: '/pages/order/index',
+          })
         }, !0);
+      
     },
     change: function(t) {
         var a = {};
@@ -66,6 +71,7 @@ Page({
         this.setData({
             "order.refundstate": 0
         });
+        
     },
     refundcancel: function(t) {
         a.refundcancel(this.data.options.id, function() {
