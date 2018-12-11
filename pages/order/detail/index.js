@@ -96,6 +96,10 @@ Page({
         var t = this;
         e.refundcancel(this.data.options.id, function() {
             t.get_list();
+            wx.navigateTo({
+              url:'/pages/order/index'
+            })
+            
         });
     },
     onShareAppMessage: function() {
