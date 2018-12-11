@@ -137,13 +137,16 @@
                                                             </block>
                                                         </block>
                                                         <block>
-                                                            <block wx:if="{{item.canrefund}}">
-                                                                <navigator class="btn btn-default" openType="navigate" url="/pages/order/refund/index">{{item.refundtext}}</navigator>
+                                                            <block wx:if="{{item.trefound}}">
+                                                                <navigator class="btn btn-default" openType="navigate" url="/pages/order/refund/index?id={{item.id}}">申请售后</navigator>
                                                             </block>
                                                         </block>
                                                         <block>
                                                             <block wx:if="{{item.cancancelrefund}}">
-                                                                <navigator class="btn btn-default-o btn-cancel" openType="navigate">取消申请</navigator>
+                                                            <view bindtap="refundcancel" class="btn btn-danger btn-danger-o" data-orderid="{{item.id}}">
+              取消申请 
+            </view>
+                                                                <!-- <navigator class="btn btn-default-o btn-cancel" openType="navigate">取消申请</navigator> -->
                                                             </block>
                                                         </block>
                                                         <block>
