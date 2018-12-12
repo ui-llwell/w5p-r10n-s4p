@@ -92,12 +92,7 @@
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
       },
-      {
-        "pagePath": "pages/scan/scan",
-        "text": "扫一扫",
-        "iconPath": "static/images/tabbar/icon-f3.png",
-        "selectedIconPath": "static/images/tabbar/icon-f3-active.png"
-      },
+     
       {
         "pagePath": "pages/member/cart/index",
         "text": "购物车",
