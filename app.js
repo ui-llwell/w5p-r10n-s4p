@@ -212,7 +212,7 @@ App({
     },
     globalData: {
       appid: "wx212d522fca71351b",
-      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=9",
+      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=2",
       approot: "https://eshop.llwell.net/addons/ewei_shopv2/",
         userInfo: null
     }
