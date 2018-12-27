@@ -20,7 +20,18 @@
                                                 <block wx:elif="{{goods.isdiscount!=0&&goods.isdiscount_time>=now}}">{{goods.minprice}}</block>
                                                 <block wx:else>
                                                     <block>
-                                                        <block wx:if="{{goods.maxprice==goods.minprice}}">{{goods.marketprice}} </block>
+                                                        <block wx:if="{{goods.maxprice==goods.minprice}}">
+                                                          <block wx:if="{{limits}}">
+                                                            <block wx:if="{{goods.isdiscount==0||goods.isdiscount!=0&&goods.isdiscount_time<now}}"><text wx:if="{{!goods.memberprice==''&&goods.memberprice!=minprice&&!goods.levelbuy==0}}">{{goods.memberprice.price}}</text>
+                                                              <block wx:else>
+                                                               {{goods.marketprice}} 
+                                                              </block> 
+                                                            </block>
+                                                        </block>
+
+
+
+                                                        </block>
                                                         <block wx:else>{{goods.minprice}}~{{goods.maxprice}}</block>
                                                     </block>
                                                 </block>
