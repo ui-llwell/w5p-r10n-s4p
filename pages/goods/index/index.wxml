@@ -37,7 +37,12 @@
                 </block>
             </view>
             <view class="price">
-                <view class="text">¥{{item.minprice}}</view>
+                <view class="text">
+                ¥{{item.minprice}}
+
+<!-- ¥ 此处为全部商品价格更改的地方 -->
+                  
+                </view>
                 <block>
                     <block wx:if="{{item.type!=9&&item.type!=5&&item.bargain==0}}">
                         <view bindtap="selectPicker" data-buytype="buy" data-id="{{item.id}}">
