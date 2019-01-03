@@ -5,8 +5,20 @@ App({
         this.onLaunch();
     },
     onLaunch: function(option) {
+      var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
+      if (!isDebug) {
+        //远程域名
+        wx.setStorageSync('domainName', "https://eshop.llwell.net/llback/Api/")
+      }
+      else {
+        //本地测试域名
+        // wx.setStorageSync('domainName', "http://192.168.0.11:53695/api/analysis/Wx/")
+      }
+
+
       if(option.query!=undefined){
         this.needData.agent = option.query.agent
+        this.needData.bbcode = option.query.bbcode
       }
      
 
@@ -25,6 +37,9 @@ App({
             }
         }), this.getConfig();
         this.getUserInfo(function(e) {
+
+          t.bbcode(e.openid)
+          console.log('!!!!sss!!!!!!!!!!!!!!', e.openid)
         }, function(e, t) {
             var t = t ? 1 : 0, e = e || "";
             t && wx.redirectTo({
@@ -77,6 +92,7 @@ App({
         }
         return t;
     },
+    // 扫二维码 绑定公众号
     scan:function(a){
       const params = {
         openId:a,
@@ -103,6 +119,116 @@ App({
         }
       })
     },
+    // 扫二维码 与B2B后台绑定
+  bbcode: function (a) {
+
+    const params = {
+      openId: a,
+      pagentCode: this.needData.bbcode,
+      appId: this.globalData.appid
+    }
+    const that = this;
+    this.Ajax(
+      'BindingWXAPP',
+      'POST',
+      { ...params},
+      function (json) {
+        // console.log('~~~',json);
+        if (json.success) {
+          
+          that.Toast('绑定成功','success',1500)
+
+
+        } else {
+          that.Toast('绑定失败', 'none', 2500)
+          // that.Toast('','none',2000,json.msg.code)
+          console.log('here something wrong');
+        }
+      }
+    )
+
+
+
+
+    
+    // console.log('params', params)
+    // let url = 'https://eshop.llwell.net/llback/Api/BindingWXB2B'
+    // let url = 'https://eshop.llwell.net/llback/Api/BindingWXAPP'
+    // wx.request({
+    //   url: url,
+    //   data: params,
+    //   method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   }, // 设置请求的 header
+    //   success: function (res) {
+    //     wx.hideLoading();
+    //   },
+    //   fail: function (res) {
+    //     wx.hideLoading();
+    //   },
+    //   complete: function () {
+    //     // 
+    //   }
+    // })
+  },
+  Ajax: function (url, type, data, callback) {
+    wx.showLoading({
+      title: 'loading',
+      duration: 1000,
+    });
+
+    // var send = {
+    //   // token: wx.getStorageSync('token'),
+    //   // method: method,
+    //   param: data,
+    // };
+    wx.request({
+      url: wx.getStorageSync('domainName') + url,
+      data: data,
+      method: type, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        'content-type': 'application/json' // 默认值
+      }, // 设置请求的 header
+      success: function (res) {
+        wx.hideLoading();
+        // 发送请求成功执行的函数
+        if (typeof callback === 'function') {
+          callback(res.data);
+        }
+      },
+      fail: function (res) {
+        wx.hideLoading();
+        wx.showModal({
+          title: '网络异常提示',
+          content: '请检查网络，并重新登录小程序',
+          showCancel: false,
+        })
+        //console.log('fa',res)
+      },
+      complete: function () {
+        // wx.hideLoading();
+      }
+    })
+  },
+  Toast: function (title, icon, duration, code) {
+    let content = title;
+    switch (code) {
+      case 10002:
+        content = '会员注册异常'
+        break;
+      case 10003:
+        content = '用户已绑定'
+        break;
+      default:
+        console.log(code);
+    }
+    wx.showToast({
+      title: content,
+      icon: icon,
+      duration: duration
+    });
+  },
     getUserInfo: function(t, n) {
       const that = this;
         var o = this, i = {};
@@ -115,7 +241,12 @@ App({
                   if (ag!= undefined){
                     that.scan(a.openid)
                   }
-                  
+
+                  const bb = that.needData.bbcode
+                  if (bb != undefined) {
+                    that.bbcode(a.openid)
+                  }
+                  console.log('!!!!!!!!!!!!!!!!!!!!!')
                     a.error ? e.alert("获取用户登录态失败:" + a.message) : a.isclose && n && "function" == typeof n ? n(a.closetext, !0) : wx.getUserInfo({
                       
                         success: function(n) {
@@ -208,7 +339,8 @@ App({
         flag: !1
     },
     needData:{
-      agent:''
+      agent:'',
+      bbcode:'',
     },
     globalData: {
       appid: "wx212d522fca71351b",
