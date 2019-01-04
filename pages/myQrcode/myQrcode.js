@@ -1,11 +1,12 @@
 // pages/myQrCode/myQrcode.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    url:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/qrcode@3x.png',
+    url:'',
   },
 
   
@@ -14,26 +15,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData();
   },
 
   getData:function(){
     const params = {
+      appId: app.globalData.appid,
       openId: wx.getStorageSync('oi')
     }
     const that = this;
     app.Ajax(
-      'GetProfitByOpenId',
+      'GetQrcode',
       'POST',
       { ...params },
       function (json) {
         // console.log('~~~',json);
-        if (json.success) {
+        if (json.type==1) {
           that.setData({
-            url: json.data
+            url: json.msg
           })
         } else {
-          that.Toast(json.errorMessage, 'none', 2500)
+          app.Toast(json.msg, 'none', 2500)
           // that.Toast('','none',2000,json.msg.code)
           console.log('here something wrong');
         }

@@ -10,8 +10,8 @@ display:block;
 
 }
 .content {
-  width: 580rpx;
-  height: 580rpx;
+  width: 650rpx;
+  height: 650rpx;
   position: absolute;
   left: 0;
   top: 0;
@@ -22,10 +22,10 @@ display:block;
   box-shadow:0 10px 20px 0 rgba(0,0,0,0.20);
 }
 .img {
-  width: 500rpx;
-  height: 500rpx;
+  width: 610rpx;
+  height: 610rpx;
   margin: 0 auto;
-  padding-top: 40rpx;
+  padding-top: 20rpx;
 }
 .canvasImg{
   width: 100%;
