@@ -12,64 +12,7 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    getData:{
-      accountMoney:0.01,
-      monthProfit:1.00,
-      lastMonthProfit:2.00,
-      monthGoodsProfitList:[
-        {
-          month: 12,
-          monthTotal: 0.1,
-          goodsProfitList: [
-            {
-              goodsName: 'woshi mingzi ',
-              profit: 0.01,
-              tradeTime: '2015',
-              accountTime: '2015',
-              tradeAmount: '10.00',
-            },
-            {
-              goodsName: 'woshi mingzi ',
-              profit: 0,
-              tradeTime: '2015',
-              accountTime: '2015',
-              tradeAmount: '10',
-            }
-          ]
-        },
-        {
-          month: 11,
-          monthTotal: 0,
-          goodsProfitList: [
-            {
-              goodsName: 'woshi mingzi ',
-              profit: 0,
-              tradeTime: '2015',
-              accountTime: '2015',
-              tradeAmount: '10',
-            },
-            {
-              goodsName: 'woshi mingzi ',
-              profit: 0,
-              tradeTime: '2015',
-              accountTime: '2015',
-              tradeAmount: '10',
-            }
-          ]
-        },
-      ],
-      accountInfoList:[
-        {
-          merchantOrderId:'djhhasgdjhagsd001',
-          accountTime:'2016',
-          profit:'12.00'
-        }, {
-          merchantOrderId: 'djhhasgdjhagsd001',
-          accountTime: '2016',
-          profit: '12.00'
-        }
-      ]
-    }
+    getData:{}
   },
 
   onLoad: function () {

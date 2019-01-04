@@ -146,7 +146,7 @@ App({
           }else{
             that.Toast(json.msg, 'success', 1500)
           }
-          
+          that.getttRole();
 
         } else {
           that.Toast(json.msg, 'none', 2500)
