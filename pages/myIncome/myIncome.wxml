@@ -1,0 +1,87 @@
+<!--pages/myIncome/myIncome.wxml-->
+<view class='income'>
+  <view class='income-top'>
+    <view class='top-title'>账户余额（元）</view>
+    <view class='top-money'>{{getData.accountMoney}}</view>
+    <view class='top-income'>
+      <view class='top-income-this'>
+        <rich-text class='this-money'>¥ {{getData.monthProfit}}</rich-text>
+        <rich-text class='this-word'>本月预估</rich-text>
+      </view>
+      <view class='top-income-this'>
+        <rich-text class='this-money'>¥ {{getData.lastMonthProfit}}</rich-text>
+        <rich-text class='this-word'>上月结算</rich-text>
+        </view>
+    </view>
+  </view>
+  <view class='income-tab'>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+          <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                  <view class="weui-navbar__title">{{item}}</view>
+              </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+              <!-- 收益明细 -->
+                <scroll-view class='income-tab-wrap'>
+                  <view class='unit-month'  wx:for="{{getData.monthGoodsProfitList}}">
+                    <view class='month-title'>
+                      <text>{{item.month}}月 </text>
+                      <text class='month-money'>¥ {{item.monthTotal}}</text>
+                    </view>
+                    <view class='month-content'>
+                      <view class='unit' wx:for="{{item.goodsProfitList}}">
+                        <view class='unit-left'>
+                          <view class='unit-dark'>{{item.goodsName}}</view>
+                          <rich-text>创建日 {{item.tradeTime}}</rich-text>
+                          <rich-text>结算日 {{item.accountTime}}</rich-text>
+                          <rich-text>订单金额 ¥ {{item.tradeAmount}}</rich-text>
+                        </view>
+                        <view class='unit-right'>
+                          ¥ {{item.profit}}
+                        </view>
+                      </view>
+
+                      
+                    </view>
+                  </view>
+                  
+                </scroll-view>
+                <!-- 当内容List 不为空时隐藏 -->
+                <view class='noRecord' hidden="{{getData.monthGoodsProfitList != ''}}">{{noRecord}}</view>
+                <view class="bottomLine" hidden="{{getData.monthGoodsProfitList == ''}}">没错，我是底线 ;-)</view>
+              <!--  -->
+          </view>
+          
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <!-- 结算记录 -->
+            <scroll-view class='income-tab-wrap'>
+              
+                <view class='month-content'>
+                  <view class='unit' wx:for="{{getData.accountInfoList}}">
+                    <view class='unit-left'>
+                      <view class='unit-dark'>订单编号 {{item.merchantOrderId}}</view>
+                      <rich-text>结算日期 {{item.accountTime}}</rich-text>
+                    </view>
+                    <view class='unit-right'>
+                      ¥ {{item.profit}}
+                    </view>
+                  </view>
+
+                  
+                </view>
+              
+
+            </scroll-view>
+            <!-- 当内容List 不为空时隐藏 -->
+                <view class='noRecord' hidden="{{getData.accountInfoList != ''}}">{{noRecord}}</view>
+                <view class="bottomLine" hidden="{{getData.accountInfoList == ''}}">没错，我是底线 ;-)</view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

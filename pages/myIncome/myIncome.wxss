@@ -1,0 +1,117 @@
+
+@import '../../style/weui.wxss';
+/* pages/myIncome/myIncome.wxss */
+page{
+  font-size: 26rpx;
+  background: rgb(240, 246, 250);
+}
+
+.income-top{
+  padding: 40rpx 0;
+}
+.top-title{
+  color: #777;
+  padding: 10rpx 20rpx;
+  /* font-size: 22rpx; */
+}
+.top-money{
+  text-align: center;
+  font-size: 70rpx;
+  padding: 10rpx 20rpx;
+}
+.top-income{
+  /* border: 1px dashed #dedede; */
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.top-income-this{
+  padding: 10rpx 60rpx ;
+}
+.this-money{
+  padding: 5rpx 20rpx;
+  color: #ff0000;
+}
+.this-word{
+  padding: 5rpx 20rpx;
+}
+.weui-tab__content{
+    /* padding: 10rpx; */
+}
+
+.income .weui-bar__item_on {
+  
+}
+.income .weui-navbar{
+  border-color: #d0e6f8
+}
+/* tab */
+/* .income-tab-wrap{
+  height: 1000rpx;
+} */
+.unit-month{
+  
+}
+.month-title{
+  padding: 10rpx; 
+  /* background: rgb(206, 231, 248) */
+}
+.month-money{
+  color: #ff0000;
+  margin-left: 30rpx;
+}
+.month-content{
+  
+}
+.unit{
+  padding: 10rpx;
+  background: #fff;
+  margin-bottom: 10rpx;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.unit-left,.unit-right{
+  padding: 10rpx;
+  font-size: 24rpx;
+}
+.unit-dark{
+  display: inline-block;
+  width: 500rpx;
+  font-size: 26rpx;
+  color: #333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.unit-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff0000;
+  font-size: 26rpx;
+}
+
+.bottomLine{
+  font-size: 24rpx;
+  color:#999;
+  padding: 0 20rpx 0;
+    margin: 20rpx 0;
+    line-height: 1px;
+    border-left: 180rpx dashed #EDEDED;
+    border-right: 180rpx dashed #EDEDED;
+    text-align: center;
+}
+.noRecord{
+  width: 100%;
+  /* height: 90%; */
+  /* position: absolute; */
+  margin: 50rpx 0;
+  /* top: 350%; */
+  text-align: center;
+  background: url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/shop_icon_norecord@3x.png') no-repeat center 0%;
+  background-size:100rpx 100rpx;
+  padding:150rpx 0 0;
+
+}

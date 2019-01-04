@@ -1,6 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/myIncome/myIncome",
+    "pages/myQrcode/myQrcode",
+    
+    
+    
+
     "pages/custom/index",
     "pages/creditshop/detail/index",
     "pages/creditshop/comment/index",

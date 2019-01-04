@@ -43,11 +43,16 @@
         <include src="/pages/diy/template/tpl_menu2.wxml"></include>
     </block>
 </block>
+<!-- 个人中心 menuList -->
 <block>
     <block wx:if="{{diyitem.id=='listmenu'}}">
         <include src="/pages/diy/template/tpl_listmenu.wxml"></include>
     </block>
+
+
+    
 </block>
+
 <block>
     <block wx:if="{{diyitem.id=='picture'}}">
         <include src="/pages/diy/template/tpl_picture.wxml"></include>

@@ -37,9 +37,9 @@ App({
             }
         }), this.getConfig();
         this.getUserInfo(function(e) {
-
+          t.getttRole();
           t.bbcode(e.openid)
-          console.log('!!!!sss!!!!!!!!!!!!!!', e.openid)
+          // console.log('!!!!sss!!!!!!!!!!!!!!', e.openid)
         }, function(e, t) {
             var t = t ? 1 : 0, e = e || "";
             t && wx.redirectTo({
@@ -129,20 +129,23 @@ App({
     }
     const that = this;
     this.Ajax(
-      'BindingWXAPP',
+      'BindingWXB2B',
       'POST',
       { ...params},
       function (json) {
         // console.log('~~~',json);
-        if (json.success) {
+        if (json.type==1) {
+          if (json.msg =='已存在绑定数据'){
+            // 
+          }else{
+            that.Toast(json.msg, 'success', 1500)
+          }
           
-          that.Toast('绑定成功','success',1500)
-
 
         } else {
-          that.Toast('绑定失败', 'none', 2500)
+          that.Toast(json.msg, 'none', 2500)
           // that.Toast('','none',2000,json.msg.code)
-          console.log('here something wrong');
+          // console.log('here something wrong');
         }
       }
     )
@@ -171,6 +174,28 @@ App({
     //     // 
     //   }
     // })
+  },
+  getttRole: function () {
+    const params = {
+      openId: wx.getStorageSync('oi')
+    }
+    const that = this;
+    this.Ajax(
+      'GetTypeByOpenId',
+      'POST',
+      { ...params },
+      function (json) {
+        // console.log('~~~', json);
+        if (json.type == 1) {
+          that.needData.role = json.msg
+          // wx.setStorageSync('role', json.msg )
+        } else {
+          that.Toast(json.msg, 'none', 2500)
+          // that.Toast('','none',2000,json.msg.code)
+          // console.log('here something wrong');
+        }
+      }
+    )
   },
   Ajax: function (url, type, data, callback) {
     wx.showLoading({
@@ -245,8 +270,11 @@ App({
                   const bb = that.needData.bbcode
                   if (bb != undefined) {
                     that.bbcode(a.openid)
+
                   }
-                  console.log('!!!!!!!!!!!!!!!!!!!!!')
+                  wx.setStorageSync('oi', a.openid)
+                  that.getttRole()
+                  // console.log('!!!!!!!!!!!!!!!!!!!!!')
                     a.error ? e.alert("获取用户登录态失败:" + a.message) : a.isclose && n && "function" == typeof n ? n(a.closetext, !0) : wx.getUserInfo({
                       
                         success: function(n) {
@@ -341,6 +369,7 @@ App({
     needData:{
       agent:'',
       bbcode:'',
+      role:null
     },
     globalData: {
       appid: "wx212d522fca71351b",

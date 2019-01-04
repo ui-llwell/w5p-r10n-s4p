@@ -2,6 +2,7 @@ var e = getApp(), a = e.requirejs("core"), t = e.requirejs("wxParse/wxParse"), i
 
 Page({
     data: {
+        ttRole:null,
         route: "member",
         icons: e.requirejs("icons"),
         member: {},
@@ -14,9 +15,15 @@ Page({
         duration: 500,
         swiperheight: 0,
         iscycelbuy: !1,
-        bargain: !1
+        bargain: !1,
+        role:null
     },
     onLoad: function(a) {
+        this.setData({
+          role:getApp().needData.role
+        },()=>{
+          // console.log('12212',this.data.role)
+        })
         var t = this;
         e.url(a), wx.getSystemInfo({
             success: function(e) {
@@ -31,10 +38,11 @@ Page({
             url: "/pages/message/auth/index"
         });
     },
+    
     getInfo: function() {
         var e = this;
         a.get("member", {}, function(a) {
-            console.log(a), 1 == a.isblack && wx.showModal({
+             1 == a.isblack && wx.showModal({
                 title: "无法访问",
                 content: "您在商城的黑名单中，无权访问！",
                 success: function(a) {
@@ -56,6 +64,7 @@ Page({
         });
     },
     onShow: function() {
+      
         this.getInfo();
         var e = this;
         wx.getSetting({

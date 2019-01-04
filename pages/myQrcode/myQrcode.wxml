@@ -1,0 +1,16 @@
+<!--pages/myQrCode/myQrcode.wxml-->
+<!-- <text>消费返利</text> -->
+<view class='content'>
+  <view class='img'>
+    <image src="{{url}}"></image>
+  </view>
+  <!-- <text>
+    请在流连合作店铺消费时
+    出示此二维码
+  </text> -->
+</view>
+<!-- <view class="weui-msg__extra-area"  hidden="{{userType==0}}">
+    <view class="weui-footer">
+        <button  open-type="share" class='share'>分享推广</button>
+    </view>
+</view> -->
