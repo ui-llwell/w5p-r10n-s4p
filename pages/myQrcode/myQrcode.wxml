@@ -2,7 +2,7 @@
 <!-- <text>消费返利</text> -->
 <view class='content'>
   <view class='img'>
-    <image src="{{url}}"></image>
+    <image src="{{url}}" data-src='{{url}}' bindtap='preview'></image>
   </view>
   <!-- <text>
     请在流连合作店铺消费时

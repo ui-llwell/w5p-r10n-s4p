@@ -99,7 +99,7 @@
             <block>
                 <block wx:if="{{list.length>0}}">
                     <view class="fui-cell-group fui-cell-click">
-                        <navigator class="fui-cell" hoverClass="none">
+                        <navigator class="fui-cell" hoverClass="none" >
                             <view class="fui-cell-icon">
                                 <text class="icox icox-dianpu1"></text>
                             </view>
@@ -122,11 +122,11 @@
                                 <radio bindtap="edit_list" checked="{{edit_list[val.id]?true:''}}" class="zoom-80" color="#ff5555" data-id="{{val.id}}"></radio>
                             </block>
                         </block>
-                        <view class="fui-list-media">
+                        <view bindtap="url" class="fui-list-media" data-url="/pages/goods/detail/index?id={{val.goodsid}}">
                             <image class="" src="{{val.thumb}}"></image>
                         </view>
                         <view class="fui-list-inner">
-                            <navigator>
+                            <navigator openType="navigate" url="/pages/goods/detail/index?id={{val.goodsid}}">
                                 <view class="text">{{val.title}}</view>
                                 <block>
                                     <block wx:if="{{val.optionid!=0}}">
