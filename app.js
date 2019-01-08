@@ -381,8 +381,8 @@ App({
       role:null
     },
     globalData: {
-      appid: "wx212d522fca71351b",
-      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=2",
+      appid: "wx9e9d6f06811f80d8",
+      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=15",
       approot: "https://eshop.llwell.net/addons/ewei_shopv2/",
         userInfo: null
     }
