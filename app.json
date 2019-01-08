@@ -1,8 +1,11 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
+    "pages/agreement/agreement",
+    "pages/modifyBankcard/modifyBankcard",
     
     
     

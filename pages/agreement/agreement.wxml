@@ -1,0 +1,4 @@
+<!--pages/agreement/agreement.wxml-->
+<view class='agreement'>
+  <image src='{{url}}' mode='widthFix' data-src='{{url}}' ></image>
+</view>

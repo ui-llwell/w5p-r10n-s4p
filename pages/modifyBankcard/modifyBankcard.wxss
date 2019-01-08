@@ -1,0 +1,112 @@
+/* pages/modifyBankcard/modifyBankcard.wxss */
+@import '../../style/weui.wxss';
+.index {
+  width: 680rpx;
+  height: 489rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 25rpx auto;
+  overflow: hidden;
+  border:1px solid #E5E5E5;
+}
+.wrap {
+  width: 640rpx;
+  height: 356rpx;
+  margin: 24rpx auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.img1 {
+  width: 640rpx;
+  height: 356rpx;
+  position: absolute;
+  left: 0;
+  top:0rpx;
+  background: #EBEBEB;
+}
+.img2 {
+  width: 640rpx;
+  height: 356rpx;
+  position: absolute;
+  left: 0;
+  top:0rpx;
+}
+.img2 image {
+  width: 640rpx;
+  height: 356rpx;
+  display: block;
+}
+.upload {
+  border-top: 1px solid #E5E5E5;
+  width: 680rpx;
+  height: 88rpx;
+  line-height: 80rpx;
+  text-indent: 20rpx;
+  position: relative;
+}
+.upload_logo {
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+}
+
+
+.iphone {
+  width: 690rpx;
+  height: 89rpx;
+  line-height: 89rpx;
+  font-size: 34rpx;
+  background: #fff;
+  margin: 0 auto 3rpx;
+  padding: 0 30rpx
+}
+.iphone_left {
+  float:  left;
+  width: 690rpx;
+  height: 89rpx;
+  
+}
+.iphone_left input {
+  width: 256px;
+  height: 89rpx;
+  display: block;
+  float: right;
+  font-size: 33rpx;
+  color: #B2B2B2;
+  margin-right: 0rpx;
+}
+.iphone_right {
+  float:  left;
+  width: 180rpx;
+  height: 89rpx;
+  color: #1AAD19;
+  letter-spacing: 0;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 89rpx;
+  border-left: 1px solid #F4F4F4;
+}
+
+.bankCard {
+  width: 690rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 28rpx;
+  color: #888;
+  margin: 0 auto 3rpx;
+  padding: 0 30rpx
+}
+
+.ok {
+   width: 670rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #1AAD19;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 0 auto;
+}

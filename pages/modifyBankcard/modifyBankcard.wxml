@@ -1,0 +1,50 @@
+<!--pages/modifyBankcard/modifyBankcard.wxml-->
+<!-- <text>我的银行卡</text> -->
+
+<view class='bankCard'>请绑定持卡人本人的银行卡</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='iphone'>
+    <view class='iphone_left'>
+      持卡人 <input  type='text' name='bankOperator' value='{{bankOperator}}'   bindinput="userNameInput"  maxlength='15' placeholder='请输入持卡人真实姓名'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      卡号 <input type='number' name='bankCardCode' value='{{bankCardCode}}' maxlength='16' bindinput='numberInput'  placeholder='请输入持卡人银行卡号'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      银行 <input type='text' name="bank" value='{{bank}}'   bindinput='bankInput'  placeholder='请输入银行卡所在银行'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      开户行 <input type='text' name="bankName" value='{{bankName}}'  bindinput='bankBranchInput'   placeholder='请输入银行卡所在开户行'></input>
+    </view>
+  </view>
+  
+  <view class='iphone'>
+    <view class='iphone_left'>
+      手机号 <input type='number' name='bankTel' value='{{bankTel}}' maxlength='11' bindinput='phoneInput'  placeholder='请输入持卡人手机号'></input>
+    </view>
+  </view>
+  <!-- <view>{{num}}</view> -->
+  <!-- 同意协议 -->
+  <checkbox-group bindchange="bindAgreeChange">
+      <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+              <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+              <view class="weui-agree__checkbox-icon">
+                  <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+              </view>
+              阅读并同意<navigator url="../agreement/agreement" class="weui-agree__link">《用户协议》</navigator>
+          </view>
+      </label>
+  </checkbox-group>
+  <view class="weui-msg__extra-area">
+    <view class="weui-footer">
+        <button disabled="{{bankOperator == '' || bank == '' || bankName == '' || bankCardCode == ''|| bankTel == '' || !isAgree}}"  formType="submit" class='ok' type='warn'>保存</button>
+    </view>
+  </view>
+  </form>
