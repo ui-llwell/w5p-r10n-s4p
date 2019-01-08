@@ -152,10 +152,10 @@ module.exports = {
     onShareAppMessage: function(t, e) {
         var n = getApp(), o = n.getCache("sysset"), i = o.share || {}, a = n.getCache("userinfo_id"), s = o.shopname || "", r = o.description || "";
         return i.title && (s = i.title), e && (s = e), i.desc && (r = i.desc), t = t || "/pages/index/index", 
-        t = -1 != t.indexOf("?") ? t + "&" : t + "?", {
+          t = -1 != t.indexOf("?") ? t + "&" : t + "?", {
             title: s,
             desc: r,
-            path: t + "mid=" + a
+          path: t + "mid=" + a + "&agent=" + n.getCache("userinfo_openid")
         };
     },
     str2Obj: function(t) {

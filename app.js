@@ -15,7 +15,7 @@ App({
         // wx.setStorageSync('domainName', "http://192.168.0.11:53695/api/analysis/Wx/")
       }
 
-      // console.log('option.query', option.query)
+      //  console.log('option.query', option.query)
       if(option.query!=undefined){
         this.needData.agent = option.query.agent
         this.needData.bbcode = option.query.bbcode
@@ -268,11 +268,14 @@ App({
                 a.code ? e.post("wxapp/login", {
                     code: a.code
                 }, function(a) {
+                  // console.log('ad', that.needData.agent)
                   const ag = that.needData.agent
                   if (ag!= undefined){
                     that.scan(a.openid)
                   }
-
+                  // if (o.getCache("usermid")){
+                  //   console.log('chuan', o.getCache("userinfo"))
+                  // }
                   const bb = that.needData.bbcode
                   if (bb != undefined) {
                     that.bbcode(a.openid)

@@ -164,7 +164,7 @@ Page((e = {
         });
     },
     onShow: function() {
-        console.log(1235);
+        // console.log(1235);
         var t = this, a = wx.getSystemInfoSync(), e = i.getCache("sysset");
         t.getShop(), t.getRecommand(), t.get_hasnewcoupon(), t.get_cpinfos(), wx.getSetting({
             success: function(a) {
