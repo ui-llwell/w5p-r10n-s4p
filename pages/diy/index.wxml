@@ -28,6 +28,7 @@
             <view class="fui-cell-text">我的银行卡</view>
             <view class="fui-cell-remark"style="color:#888888">查看</view>
         </navigator>
-    </view>
+      </view>
+      <view class="bottomLine" >没错，我是底线 ;-)</view>
   </block>
 </view>

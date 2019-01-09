@@ -10,8 +10,8 @@ display:block;
 
 }
 .content {
-  width: 650rpx;
-  height: 650rpx;
+  width: 680rpx;
+  height: 710rpx;
   position: absolute;
   left: 0;
   top: 0;
@@ -19,11 +19,11 @@ display:block;
   right: 0;
   margin: auto;
   background: #fff;
-  box-shadow:0 10px 20px 0 rgba(0,0,0,0.20);
+  /* box-shadow:0 10px 20px 0 rgba(0,0,0,0.20); */
 }
 .img {
-  width: 610rpx;
-  height: 610rpx;
+  width: 630rpx;
+  height: 630rpx;
   margin: 0 auto;
   padding-top: 20rpx;
 }
@@ -46,4 +46,10 @@ display:block;
 .share {
   width: 670rpx;
   height: 94rpx;
+}
+.word{
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  color: #777;
 }
