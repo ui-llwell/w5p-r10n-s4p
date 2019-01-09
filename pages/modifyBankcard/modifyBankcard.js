@@ -89,19 +89,28 @@ Page({
       openId: wx.getStorageSync('oi')
     }
     app.Ajax(
-      'AddBankCode',
+      'GetBankCode',
       'POST',
       { ...params },
       function (json) {
         // console.log('~~~', json);
         if (json.type == 1) {
           that.setData({
-            bankOperator: json.data.bankOperator,
-            bank: json.data.bank,
-            bankName: json.data.bankName,
-            bankTel: json.data.bankTel,
-            bankCardCode: json.data.bankCardCode,
+            bankOperator: json.bankParam.bankOperator,
+            bank: json.bankParam.bank,
+            bankName: json.bankParam.bankName,
+            bankTel: json.bankParam.bankTel,
+            bankCardCode: json.bankParam.bankCardCode,
           })
+          if (json.bankParam.bankOperator!=''){
+            that.setData({
+              isAgree: true
+            })
+          }else{
+            that.setData({
+              isAgree: false
+            })
+          }
           
         } else {
           app.Toast('系统错误', 'none', 2500)
