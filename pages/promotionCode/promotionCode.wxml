@@ -1,5 +1,4 @@
-<!--pages/myQrCode/myQrcode.wxml-->
-<!-- <text>消费返利</text> -->
+<!--pages/promotionCode/promotionCode.wxml-->
 <view class='content'>
   <view class='img'>
     <image src="{{url}}" data-src='{{url}}' bindtap='preview'></image>
@@ -9,8 +8,3 @@
     点击图片长按保存，分享给身边的朋友
   </view>
 </view>
-<!-- <view class="weui-msg__extra-area"  hidden="{{userType==0}}">
-    <view class="weui-footer">
-        <button  open-type="share" class='share'>分享推广</button>
-    </view>
-</view> -->

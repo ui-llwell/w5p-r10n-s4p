@@ -7,6 +7,14 @@
     <!-- wx:if="{{role==2}}" -->
     <block wx:if="{{role==2}}">
       <view class="fui-cell-group fui-cell-click">
+        
+        <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/myIncome/myIncome">
+            <view class="fui-cell-icon">
+                <text class="icox icox-details"></text>
+            </view>
+            <view class="fui-cell-text">我的收益</view>
+            <view class="fui-cell-remark"style="color:#888888">查看</view>
+        </navigator>
         <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/myQrcode/myQrcode">
             <view class="fui-cell-icon">
                 <text class="icox icox-qrcode"></text>
@@ -14,11 +22,11 @@
             <view class="fui-cell-text">我的二维码</view>
             <view class="fui-cell-remark"style="color:#888888">查看</view>
         </navigator>
-        <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/myIncome/myIncome">
+        <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/promotionCode/promotionCode">
             <view class="fui-cell-icon">
-                <text class="icox icox-details"></text>
+                <text class="icox icox-qrcode"></text>
             </view>
-            <view class="fui-cell-text">我的收益</view>
+            <view class="fui-cell-text">我的推广码</view>
             <view class="fui-cell-remark"style="color:#888888">查看</view>
         </navigator>
         <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/modifyBankcard/modifyBankcard">

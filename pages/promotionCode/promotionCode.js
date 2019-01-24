@@ -1,24 +1,19 @@
-// pages/myQrCode/myQrcode.js
+
 const app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    url:'',
+    url: '',
   },
-
-  
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getData();
   },
-
-  getData:function(){
+  getData: function () {
     const params = {
       appId: app.globalData.appid,
       openId: wx.getStorageSync('oi')
@@ -30,7 +25,7 @@ Page({
       { ...params },
       function (json) {
         // console.log('~~~',json);
-        if (json.type==1) {
+        if (json.type == 1) {
           that.setData({
             url: json.msg
           })
@@ -42,14 +37,14 @@ Page({
       }
     )
   },
-  preview:function(e){
+  preview: function (e) {
     // console.log('e', e.currentTarget.dataset.src)
     wx.previewImage({
       current: e.currentTarget.dataset.src, // 当前显示图片的http链接
       urls: [e.currentTarget.dataset.src] // 需要预览的图片http链接列表
     })
   },
-  savepreview:function(e){
+  savepreview: function (e) {
     // console.log('e',e)
     wx.downloadFile({
       url: e.currentTarget.dataset.src,

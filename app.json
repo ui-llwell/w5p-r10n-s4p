@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
+    "pages/promotionCode/promotionCode",
     "pages/agreement/agreement",
     "pages/modifyBankcard/modifyBankcard",
     
@@ -86,7 +87,7 @@
   "tabBar": {
     "color": "#999999",
     "selectedColor": "#ff5555",
-    "borderStyle": "",
+    "borderStyle": "white",
     "backgroundColor": "#f7f7fa",
     "list": [
       {
