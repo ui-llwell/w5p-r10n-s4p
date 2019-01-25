@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/agreementOfDistribution.jpg'
+    url: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/memberBenefits.jpg'
   },
 
   /**
