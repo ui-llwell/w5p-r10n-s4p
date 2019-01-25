@@ -5,6 +5,7 @@
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
     "pages/promotionCode/promotionCode",
+    "pages/memberBenefits/memberBenefits",
     "pages/agreement/agreement",
     "pages/modifyBankcard/modifyBankcard",
     

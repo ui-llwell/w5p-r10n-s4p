@@ -29,6 +29,13 @@
             <view class="fui-cell-text">我的推广码</view>
             <view class="fui-cell-remark"style="color:#888888">查看</view>
         </navigator>
+        <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/memberBenefits/memberBenefits">
+            <view class="fui-cell-icon">
+                <text class="icox icox-huiyuan"></text>
+            </view>
+            <view class="fui-cell-text">会员权益</view>
+            <view class="fui-cell-remark"style="color:#888888">查看</view>
+        </navigator>
         <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/modifyBankcard/modifyBankcard">
             <view class="fui-cell-icon">
                 <text class="icox icon-notice"></text>

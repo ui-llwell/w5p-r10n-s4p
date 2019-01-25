@@ -1,0 +1,11 @@
+/* pages/memberBenefits/memberBenefits.wxss */
+page{
+  height: 100%;
+  background: #fff;
+}
+.memberBenefits{
+  width: 100%
+}
+image{
+  width: 100%
+}
