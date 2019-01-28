@@ -12,7 +12,7 @@ Page({
     bankName:'',  //开户支行
     bankCardCode:'',  //卡号
     bankTel:'',    //开户人电话,
-    isAgree:false,
+    isAgree: false,
     disabled: true, 
   },
   userNameInput: function (e) {

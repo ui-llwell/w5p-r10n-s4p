@@ -31,7 +31,7 @@
   </view>
   <!-- <view>{{num}}</view> -->
   <!-- 同意协议 -->
-  <checkbox-group bindchange="bindAgreeChange">
+  <!-- <checkbox-group bindchange="bindAgreeChange">
       <label class="weui-agree" for="weuiAgree">
           <view class="weui-agree__text">
               <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
@@ -41,10 +41,10 @@
               阅读并同意<navigator url="../agreement/agreement" class="weui-agree__link">《规则》</navigator>
           </view>
       </label>
-  </checkbox-group>
+  </checkbox-group> -->
   <view class="weui-msg__extra-area">
     <view class="weui-footer">
-        <button disabled="{{bankOperator == '' || bank == '' || bankName == '' || bankCardCode == ''|| bankTel == '' || !isAgree}}"  formType="submit" class='ok' type='warn'>保存</button>
+        <button disabled="{{bankOperator == '' || bank == '' || bankName == '' || bankCardCode == ''|| bankTel == '' }}"  formType="submit" class='ok' type='warn'>保存</button>
     </view>
   </view>
   </form>
