@@ -4,7 +4,7 @@ page{
   width:750rpx;
   height:100%;
   /* background: #fafafa; */
-  background:url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/testwxbg.jpg') no-repeat 0 0;
+  background:url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/myQrcode.jpg') no-repeat 0 0;
   background-size:100% ;
   display:block;
 }
@@ -21,8 +21,8 @@ page{
   /* box-shadow:0 10px 20px 0 rgba(0,0,0,0.20); */
 }
 .img {
-  width: 630rpx;
-  height: 630rpx;
+  width: 570rpx;
+  height: 570rpx;
   margin: 0 auto;
   padding-top: 20rpx;
 }

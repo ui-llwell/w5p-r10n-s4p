@@ -20,7 +20,7 @@ Page({
     }
     const that = this;
     app.Ajax(
-      'GetQrcode',
+      'GetAgetnQrcode',
       'POST',
       { ...params },
       function (json) {

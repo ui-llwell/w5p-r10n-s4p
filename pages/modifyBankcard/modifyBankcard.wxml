@@ -38,7 +38,7 @@
               <view class="weui-agree__checkbox-icon">
                   <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
               </view>
-              阅读并同意<navigator url="../agreement/agreement" class="weui-agree__link">《用户协议》</navigator>
+              阅读并同意<navigator url="../agreement/agreement" class="weui-agree__link">《规则》</navigator>
           </view>
       </label>
   </checkbox-group>
