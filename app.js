@@ -19,6 +19,8 @@ App({
       if(option.query!=undefined){
         this.needData.agent = option.query.agent
         this.needData.bbcode = option.query.bbcode
+        this.needData.disCode = option.query.disCode
+        this.needData.onceDisCode = option.query.disCode
       }
      
 
@@ -378,6 +380,8 @@ App({
     needData:{
       agent:'',
       bbcode:'',
+      disCode:'',
+      onceDisCode:'',
       role:null
     },
     globalData: {

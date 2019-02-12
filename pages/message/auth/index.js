@@ -24,11 +24,20 @@ Page({
           var a = n.authSetting["scope.userInfo"];
           if (a) {
             getApp().getUserInfo(function (e) {
-              wx.reLaunch({
-                url: "/pages/index/index"
-              }), that.setData({
-                userInfo: a
-              })
+              // console.log('getApp().needDataaaa', getApp().needData)
+              if(getApp().needData.disCode!==undefined){
+                wx.redirectTo({
+                  url: '/pages/invitationCard/invitationCard',
+                })
+                getApp().needData.onceDisCode = ''
+              }else{
+                wx.reLaunch({
+                  url: "/pages/index/index"
+                }), that.setData({
+                  userInfo: a
+                })
+              }
+             
             }, function (e, t) {
               // console.log(1312312312312312, e, t);
              

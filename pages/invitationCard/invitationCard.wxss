@@ -1,0 +1,21 @@
+/* pages/invitationCard/invitationCard.wxss */
+page{
+  height: 100%;
+  background: #fff;
+}
+.invitationCard{
+  width: 100%
+}
+image{
+  width: 100%
+}
+.wrap{
+ text-align: center;
+ margin-bottom: 30rpx;
+}
+.goods{
+  width: 670rpx;
+  height: 960rpx;
+  /* border: 3px solid red; */
+  margin: 20rpx 0;
+}

@@ -1,0 +1,15 @@
+<!--pages/invitationCard/invitationCard.wxml-->
+<view class='invitationCard'>
+  <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/inviteHeader.jpg' mode='widthFix' ></image>
+  <view class='wrap'>
+    <navigator openType="navigate" url="/pages/goods/detail/index?id=7660">
+      <image class='goods' bindtap='' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/inviteGoods1.jpg' mode='scaleToFill' ></image>
+    </navigator>
+    <navigator openType="navigate" url="/pages/goods/detail/index?id=7661">
+      <image class='goods' bindtap='' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/inviteGoods2.jpg' mode='scaleToFill' ></image>
+    </navigator>
+    <navigator openType="navigate" url="/pages/goods/detail/index?id=7662">
+      <image class='goods' bindtap='' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/xcxEmsahlolp/inviteGoods3.jpg' mode='scaleToFill' ></image>
+    </navigator>
+  </view>
+</view>
