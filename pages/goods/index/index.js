@@ -49,9 +49,14 @@ Page({
         searchRecords: [],
         areas: [],
         limits: !0,
-        modelShow: !1
+        modelShow: !1,
+        role:'',
     },
     onLoad: function(e) {
+      const that = this
+      this.setData({
+        role: getApp().needData.role
+      })
         var s = this;
         if (setTimeout(function() {
             s.setData({

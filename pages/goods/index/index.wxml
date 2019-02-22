@@ -1,3 +1,76 @@
+<template name="tpl_list_role2">
+    <view class="fui-goods-item">
+        <navigator hoverClass="none" openType="navigate" url="{{item.bargain>0?'/pages/bargain/detail/detail?id='+item.bargain:'/pages/goods/detail/index?id='+item.id}}">
+            <view class="image" style="background-image:url({{item.thumb}})"></view>
+            <block>
+                <block wx:if="{{item.saleout&&item.cansee<=0||item.saleout&&item.cansee>0&&item.seecommission<=0}}">
+                    <image class="salez" src="{{item.saleout}}"></image>
+                </block>
+            </block>
+            <block>
+                <block wx:if="{{item.cansee>0&&item.seecommission>0}}">
+                    <view class="goods-Commission">{{item.seetitle}}￥{{item.seecommission}}</view>
+                </block>
+            </block>
+        </navigator>
+        <view class="detail goods_list_detail">
+            <navigator hoverClass="none" openType="navigate" url="{{item.bargain>0?'/pages/bargain/detail/detail?id='+item.bargain:'/pages/goods/detail/index?id='+item.id}}">
+                <view class="name">
+                    <block>
+                        <block wx:if="{{item.type==9}}">
+                            <text class="cycle-tip">周期购</text>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.bargain>0}}">
+                            <text class="cycle-tip">砍价</text>
+                        </block>
+                    </block>
+                    <text>{{item.title}}</text>
+                </view>
+            </navigator>
+            <view class='earnings'>预估收益：¥ {{item.commission1_pay}}</view>
+            <view class="original_price">
+            
+                <block>
+                    <block wx:if="{{item.productprice>0}}">
+                        <text>¥{{item.productprice}}</text>
+                    </block>
+                </block>
+            </view>
+            <view class="price">
+                <view class="text">
+                ¥{{item.minprice}}
+
+                <!-- ¥ 此处为全部商品价格更改的地方 -->
+                  
+                </view>
+                <block>
+                    <block wx:if="{{item.type!=9&&item.type!=5&&item.bargain==0}}">
+                        <view bindtap="selectPicker" data-buytype="buy" data-id="{{item.id}}">
+                            <text class="buy icox icox-gouwuche buybtnbtn buybtn-5" style="color:#ff5555"></text>
+                        </view>
+                    </block>
+                </block>
+                <block>
+                    <block wx:if="{{item.type==9&&item.bargain==0}}">
+                        <navigator class="buy buybtnbtn buybtn-1 " style="" url="/pages/goods/detail/index?id={{item.id}}">详情</navigator>
+                    </block>
+                </block>
+                <block>
+                    <block wx:if="{{item.type==5&&item.bargain==0}}">
+                        <navigator class="buy buybtnbtn buybtn-1" style="" url="/pages/goods/detail/index?id={{item.id}}">详情</navigator>
+                    </block>
+                </block>
+                <block>
+                    <block wx:if="{{item.bargain>0}}">
+                        <navigator class="buy buybtnbtn buybtn-1" style="" url="/pages/bargain/detail/detail?id={{item.bargain}}">详情</navigator>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </view>
+</template>
 <template name="tpl_list">
     <view class="fui-goods-item">
         <navigator hoverClass="none" openType="navigate" url="{{item.bargain>0?'/pages/bargain/detail/detail?id='+item.bargain:'/pages/goods/detail/index?id='+item.id}}">
@@ -29,7 +102,9 @@
                     <text>{{item.title}}</text>
                 </view>
             </navigator>
+            
             <view class="original_price">
+            
                 <block>
                     <block wx:if="{{item.productprice>0}}">
                         <text>¥{{item.productprice}}</text>
@@ -40,7 +115,7 @@
                 <view class="text">
                 ¥{{item.minprice}}
 
-<!-- ¥ 此处为全部商品价格更改的地方 -->
+                <!-- ¥ 此处为全部商品价格更改的地方 -->
                   
                 </view>
                 <block>
@@ -126,7 +201,12 @@
     </view>
     <view class="fui-goods-group {{listmode}}">
         <block wx:for="{{list}}">
+          <block wx:if="{{role==2}}">
+            <template is="tpl_list_role2" data="{{item:item}}"></template>
+          </block>
+          <block wx:else>
             <template is="tpl_list" data="{{item:item}}"></template>
+          </block>
         </block>
     </view>
     <block>

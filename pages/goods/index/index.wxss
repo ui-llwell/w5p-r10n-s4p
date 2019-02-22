@@ -553,3 +553,13 @@ background: #fff;
     line-height: 44rpx;
     font-size: 22rpx;
 }
+
+/* yugushou */
+.earnings{
+  font-size: 22rpx;
+  display: inline-block;
+  background: #FF0000;
+  color: white;
+  padding: 5rpx 10rpx;
+  border-radius: 8rpx;
+}
