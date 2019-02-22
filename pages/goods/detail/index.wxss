@@ -1718,3 +1718,14 @@
     line-height: 3rem;
     font-weight: bold;
 }
+
+/* 商品详情页  yugushou*/
+.earnings{
+  font-size: 22rpx;
+  display: inline-block;
+  background: #FF0000;
+  color: white;
+  padding: 5rpx 10rpx;
+  border-radius: 8rpx;
+  margin: 0 20rpx 10rpx;
+}

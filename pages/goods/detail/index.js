@@ -82,7 +82,9 @@ Page((a = {
         giftid: "",
         limits: !0,
         modelShow: !1,
-        showgoods: !0
+        showgoods: !0,
+        role:'',
+        // earnings:''
     }, t(e, "timer", 0), t(e, "lasttime", 0), t(e, "hour", "-"), t(e, "min", "-"), t(e, "sec", "-"), 
     t(e, "currentDate", ""), t(e, "dayList", ""), t(e, "currentDayList", ""), t(e, "currentObj", ""), 
     t(e, "currentDay", ""), t(e, "checkedDate", ""), t(e, "showDate", ""), t(e, "scope", ""), 
@@ -211,8 +213,10 @@ Page((a = {
                 preselltimeend: t.goods.preselltimeend,
                 style: t.goods.labelstyle.style,
                 navbar: t.goods.navbar,
-                labels: t.goods.labels
-            }), console.log(t.goods), wx.setNavigationBarTitle({
+                labels: t.goods.labels,
+                earnings: getApp().needData.role==2?(t.goods.minprice - t.goods.memberprice.price).toFixed(2):0
+            }), 
+            console.log(t.goods), wx.setNavigationBarTitle({
                 title: t.goods.title || "商品详情"
             }), u = t.goods.hasoption, d.isEmptyObject(t.goods.dispatchprice) || "string" == typeof t.goods.dispatchprice ? e.setData({
                 dispatchpriceObj: 0
@@ -443,6 +447,11 @@ Page((a = {
         c.number(t, e);
     },
     onLoad: function(t) {
+      // goods.minprice - goods.memberprice.price   217行增加earings
+      this.setData({
+        role:getApp().needData.role,
+      })
+    
         var e = this;
         s.get("black", {}, function(t) {
             t.isblack && wx.showModal({
