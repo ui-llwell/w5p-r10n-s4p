@@ -29,7 +29,7 @@
             </view>
         </block>
     </block>
-    <block wx:if="{{role==2}}">
+    <block wx:if="{{detail_role==2}}">
       <!-- <view class='earnings'>预估收益:{{(goods.minprice - goods.memberprice.price)}}</view> -->
       <view class='earnings'>预估收益: ¥{{earnings}}</view>
     </block>

@@ -83,8 +83,8 @@ Page((a = {
         limits: !0,
         modelShow: !1,
         showgoods: !0,
-        role:'',
-        // earnings:''
+        detail_role:'',
+        earnings:''
     }, t(e, "timer", 0), t(e, "lasttime", 0), t(e, "hour", "-"), t(e, "min", "-"), t(e, "sec", "-"), 
     t(e, "currentDate", ""), t(e, "dayList", ""), t(e, "currentDayList", ""), t(e, "currentObj", ""), 
     t(e, "currentDay", ""), t(e, "checkedDate", ""), t(e, "showDate", ""), t(e, "scope", ""), 
@@ -449,7 +449,7 @@ Page((a = {
     onLoad: function(t) {
       // goods.minprice - goods.memberprice.price   217行增加earings
       this.setData({
-        role:getApp().needData.role,
+        detail_role:getApp().needData.role,
       })
     
         var e = this;
