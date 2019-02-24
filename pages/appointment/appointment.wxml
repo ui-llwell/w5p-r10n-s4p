@@ -1,0 +1,41 @@
+<!--pages/appointment/appointment.wxml-->
+<view class='appointment'>
+  <view class='shop'>
+    <view class='shop_adress'>
+      <image 
+     class='shop_adress_img' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_map.png' mode="widthFix"></image> 
+     <view class='shop_adress_word'>
+      <text>{{address}}</text>
+     </view>
+      
+    </view>
+    <view class='shop_phone'>
+      <image 
+      class='shop_phone_img' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_tele.png' mode="widthFix"></image> 
+      <view class='shop_phone_word'>
+        <text>电话：{{phone}}</text>
+      </view>
+      <image 
+      class='shop_phone_phone' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_phone.png' mode="widthFix"></image> 
+    </view>
+  </view>
+  <view class='list' >
+      <view class='list_unit' wx:for="{{list}}">
+        <view class='unit_left'>
+          <image 
+      class='left_img' src='{{item.img}}' mode="widthFix"></image>
+        </view>
+        <view class='unit_right'>
+          <view class='unit_des'>
+            <rich-text>{{item.teacher}}</rich-text>
+            <rich-text style='color:#666'>{{item.title}}</rich-text>
+          </view>
+          <view class='unit_btn'>
+            <button class='mini_btn' >预约</button>
+          </view>
+        </view>
+        
+    </view>
+    
+  </view>
+</view>

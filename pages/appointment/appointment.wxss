@@ -1,0 +1,82 @@
+/* pages/appointment/appointment.wxss */
+.appointment{
+  padding: 20rpx;
+}
+.shop{
+  background: #fff;
+  font-size: 28rpx;
+  /* overflow: hidden; */
+}
+.shop_adress,.shop_phone{
+  display: flex;
+}
+.shop_adress_img{
+  padding: 20rpx;
+  width: 50rpx;
+  flex: 1;
+}
+.shop_adress_word{
+  padding: 12rpx;
+  width: 580rpx;
+  flex: 12;
+}
+.shop_phone_img{
+  padding: 20rpx;
+  width: 50rpx;
+  flex: 1;
+}
+.shop_phone_word{
+  padding: 12rpx;
+  width: 500rpx;
+  flex: 12;
+}
+.shop_phone_phone{
+  padding: 20rpx;
+  width: 100rpx;
+  flex: 1.5;
+}
+.list{
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.list_unit{
+  display: flex;
+}
+.unit_left{
+  padding: 25rpx;
+}
+.left_img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50rpx;
+  border: 1px solid #9dd6da;
+}
+.unit_right{
+  font-size: 28rpx;
+  width: 530px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-right: 20px;
+  display: flex;
+  padding-top: 30rpx;
+  color: #333;
+}
+.unit_des{
+  width: 400rpx;
+}
+.unit_btn{
+  margin-top: 15rpx;
+}
+button[class=mini_btn],.button-hover{
+  width: 135rpx;
+  height: 50rpx;
+  background: #9dd6da;
+  color: #fff;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  border: none;
+  border-radius: 50rpx;
+}
+.button-hover {
+  opacity: 0.6;
+}

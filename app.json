@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/appointment/appointment",
     "pages/index/index",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
