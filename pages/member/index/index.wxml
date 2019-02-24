@@ -30,8 +30,9 @@
 <block>
     <block wx:if="{{show&&diypages.page.type!=3}}">
         <view class="page member">
-            <view style="overflow: hidden;height:{{member.usemembercard?'360rpx':'290rpx'}};position: relative;background: #fff">
-                <view class="member-head" style="z-index:100;border: none;">
+            <!-- <view style="overflow: hidden;height:{{member.usemembercard?'360rpx':'290rpx'}};position: relative;background: #fff"> -->
+             <view style="overflow: hidden;height:{{member.usemembercard?'360rpx':'520rpx'}};position: relative">
+                <!-- <view class="member-head" style="z-index:100;border: none;">
                     <view class="child">
                         <view class="title">{{member.moneytext}}</view>
                         <view class="number">{{member.credit2}}</view>
@@ -57,8 +58,34 @@
                             </block>
                         </block>
                     </view>
+                </view> -->
+                <!-- 头部头像/用户名 -->
+                <view class="member-head" style="z-index:100;border: none;">
+                    <view class="child userinfo">
+                        <view class="avatar">
+                            <image class="icon" src="{{member.avatar||'/static/images/noface.png'}}"></image>
+                        </view>
+                        <view class="nickname">{{member.nickname||'未更新用户信息'}}</view>
+                        <!-- <view class="level">{{member.levelname}}</view> -->
+                    </view>
                 </view>
-                <view class="member_header"></view>
+
+                <!-- 会员积分 -->
+                <view class="t_member_message">
+                  <view class="t_integral">
+                    <view class="t_integral_title">会员积分</view>
+                    <view class="t_integral_details">
+                      <view class="t_number">2500</view>
+                      <view class="t_detail">明细</view>
+                    </view>
+                  </view>
+
+                  <view class="t_balance">会员余额</view>
+                </view>
+
+                <!-- 背景 -->
+                <!-- <view class="member_header"></view> -->
+                <view class="member_header_bg"></view>
                 <block>
                     <block wx:if="{{member.usemembercard}}">
                         <navigator class="member_card" hoverClass="none" openType="navigate" url="/pages/member/membercard/index?hasmembercard={{member.hasmembercard}}">
@@ -142,6 +169,8 @@
                         </block>
                     </view>
                 </view>
+                
+                <!-- 我的预约等各项 -->
                 <view class="fui-cell-group fui-cell-click" openType="navigate">
                     <block>
                         <block wx:if="{{member.usemembercard}}">

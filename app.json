@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/appointment/appointment",
+    "pages/member/index/index",
+
     "pages/index/index",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
@@ -10,6 +11,7 @@
     "pages/modifyBankcard/modifyBankcard",
     "pages/invitationCard/invitationCard",
     
+    "pages/appointment/appointment",
     
 
     "pages/custom/index",
@@ -35,7 +37,7 @@
     "pages/goods/package/index",
     "pages/goods/package/detail/index",
     "pages/goods/poster/poster",
-    "pages/member/index/index",
+    
     "pages/member/info/index",
     "pages/member/bind/index",
     "pages/member/favorite/index",
@@ -98,22 +100,16 @@
         "selectedIconPath": "static/images/tabbar/icon-1-active.png"
       },
       {
+        "pagePath": "pages/appointment/appointment",
+        "text": "预存",
+        "iconPath": "static/images/tabbar/icon-4.png",
+        "selectedIconPath": "static/images/tabbar/icon-4-active.png"
+      },
+      {
         "pagePath": "pages/goods/index/index",
         "text": "全部商品",
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
-      },
-      {
-        "pagePath": "pages/scan/scan",
-        "text": "扫一扫",
-        "iconPath": "static/images/tabbar/icon-f3.png",
-        "selectedIconPath": "static/images/tabbar/icon-f3-active.png"
-      },
-      {
-        "pagePath": "pages/member/cart/index",
-        "text": "购物车",
-        "iconPath": "static/images/tabbar/icon-4.png",
-        "selectedIconPath": "static/images/tabbar/icon-4-active.png"
       },
       {
         "pagePath": "pages/member/index/index",
