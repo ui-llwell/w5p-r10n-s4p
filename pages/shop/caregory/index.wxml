@@ -77,9 +77,10 @@
                                         <block>
                                             <block wx:if="{{selector==0&&back==0}}">
                                                 <navigator class="fui-icon-col " openType="navigate" url="/pages/goods/index/index">
-                                                    <view class="icon {{set.style==0?'radio':''}}">
+                                                    <!-- <view class="icon {{set.style==0?'radio':''}}">
                                                         <text class="icox icox-app"></text>
-                                                    </view>
+                                                    </view> -->
+                                                    <image style='width:150rpx;height:150rpx;' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto1.png'></image>
                                                     <view class="text">所有商品</view>
                                                 </navigator>
                                             </block>

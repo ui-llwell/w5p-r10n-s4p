@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/member/index/index",
     "pages/code/code",
@@ -107,7 +108,7 @@
         "selectedIconPath": "static/images/tabbar/b2.png"
       },
       {
-        "pagePath": "pages/goods/index/index",
+        "pagePath": "pages/shop/caregory/index",
         "text": "全部商品",
         "iconPath": "static/images/tabbar/a3.png",
         "selectedIconPath": "static/images/tabbar/b3.png"
