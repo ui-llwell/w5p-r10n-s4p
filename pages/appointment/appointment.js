@@ -9,12 +9,12 @@ Page({
     phone:'39857780',
     list:[
       {
-        img:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto1.png',
+        img:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/lengjilin.jpg',
         teacher:'冷基林',
         title:'发型师',
         tele:'18525328308'
       }, {
-        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto2.png',
+        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/zhoulong.jpg',
         teacher: '周龙',
         title: '发型师',
         tele:'13664289496'
