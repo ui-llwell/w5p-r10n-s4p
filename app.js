@@ -39,14 +39,14 @@ App({
             }
         }), this.getConfig();
         this.getUserInfo(function(e) {
-          t.getttRole();
+          // t.getttRole();
           
           // console.log('option.query', option.query)
-          const bb = t.needData.bbcode
-          if (bb != undefined) {
-            t.bbcode(e.openid)
+          // const bb = t.needData.bbcode
+          // if (bb != undefined) {
+          //   t.bbcode(e.openid)
 
-          }
+          // }
           // console.log('!!!!sss!!!!!!!!!!!!!!', e.openid)
         }, function(e, t) {
             var t = t ? 1 : 0, e = e || "";
@@ -278,11 +278,11 @@ App({
                   // if (o.getCache("usermid")){
                   //   console.log('chuan', o.getCache("userinfo"))
                   // }
-                  const bb = that.needData.bbcode
-                  if (bb != undefined) {
-                    that.bbcode(a.openid)
+                  // const bb = that.needData.bbcode
+                  // if (bb != undefined) {
+                  //   that.bbcode(a.openid)
 
-                  }
+                  // }
                   wx.setStorageSync('oi', a.openid)
                   that.getttRole()
                   // console.log('!!!!!!!!!!!!!!!!!!!!!')
