@@ -23,7 +23,7 @@
       <!-- <view class="fui-cell-icon">
           <text class="icox icox-details"></text>
       </view> -->
-      <view class="fui-cell-text">我的收款码</view>
+      <view class="fui-cell-text">我的邀请码</view>
       <view class="fui-cell-remark"style="color:#888888"></view>
   </navigator>
 </view>
