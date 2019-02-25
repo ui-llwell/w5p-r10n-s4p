@@ -385,7 +385,7 @@ App({
       role:null
     },
     globalData: {
-      appid: "wx36db529673b38b23",
+      appid: "wx1b6e106feb2ece00",
       api: "https://m.a-cubic.com/app/ewei_shopv2_api.php?i=15",
       approot: "https://m.a-cubic.com/addons/ewei_shopv2/",
         userInfo: null

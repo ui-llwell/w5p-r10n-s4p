@@ -1,9 +1,9 @@
 {
   "pages": [
-    
+    "pages/index/index",
     "pages/member/index/index",
     "pages/code/code",
-    "pages/index/index",
+    
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
     "pages/promotionCode/promotionCode",
