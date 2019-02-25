@@ -1360,7 +1360,7 @@
 .fui-goods-item .detail .price .text {
     -webkit-box-flex: 1;
     flex: 1;
-    color: #ff5555;
+    color: #333;
 }
 
 .fui-goods-item .detail .price .minprice {

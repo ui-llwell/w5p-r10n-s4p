@@ -103,14 +103,14 @@
                 </view>
             </navigator>
             
-            <view class="original_price">
+            <!-- <view class="original_price">
             
                 <block>
                     <block wx:if="{{item.productprice>0}}">
                         <text>¥{{item.productprice}}</text>
                     </block>
                 </block>
-            </view>
+            </view> -->
             <view class="price">
                 <view class="text">
                 ¥{{item.minprice}}
@@ -121,7 +121,7 @@
                 <block>
                     <block wx:if="{{item.type!=9&&item.type!=5&&item.bargain==0}}">
                         <view bindtap="selectPicker" data-buytype="buy" data-id="{{item.id}}">
-                            <text class="buy icox icox-gouwuche buybtnbtn buybtn-5" style="color:#ff5555"></text>
+                            <text class="buy buybtnbtn buybtn-2" style="background:#9dd6d9">购买</text>
                         </view>
                     </block>
                 </block>

@@ -736,7 +736,7 @@
 }
 
 .option-picker .fui-navbar .buybtn,.option-picker .fui-navbar .confirmbtn {
-    background: #fd5555;
+    background: #9dd6da;
 }
 
 .option-picker-inner {

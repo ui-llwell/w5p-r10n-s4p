@@ -91,7 +91,7 @@ page {
 }
 
 .sort .item.on .text {
-    color: #fd5454;
+    color: #9dd6d9;
 }
 
 .sort .item image {
@@ -478,13 +478,13 @@ background: #fff;
 .fui-goods-item .detail .price .buybtnbtn {
     display: inline-block;
     height: 40rpx;
-    border: 1px solid #ff5555;
+    border: 1px solid #9dd6d9;
     width: auto;
     border-radius: 4rpx;
 }
 
 .fui-goods-item .detail .price .buybtn-1 {
-    color: #ff5555;
+    color: #9dd6d9;
     line-height: 40rpx;
     background: #fff;
     padding: 0rpx 14rpx;
@@ -493,7 +493,7 @@ background: #fff;
 .fui-goods-item .detail .price .buybtn-2 {
     color: #fff;
     line-height: 40rpx;
-    background: #ff5555;
+    background: #9dd6d9;
     padding: 0rpx 14rpx;
 }
 
@@ -505,7 +505,7 @@ background: #fff;
     color: #fff;
     line-height: 44rpx;
     height: 42rpx;
-    background: #ff5555;
+    background: #9dd6d9;
     width: 44rpx;
     padding: 0;
 }
@@ -519,7 +519,7 @@ background: #fff;
 }
 
 .fui-goods-item .detail .price .buybtn-5 {
-    color: #ff5555;
+    color: #9dd6d9;
     line-height: 40rpx;
     background: #fff;
     width: 40rpx;
