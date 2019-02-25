@@ -12,12 +12,19 @@
             <view class="fui-cell-remark" style="color:{{diyitem.style.remarkcolor}}">{{childitem.remark}}</view>
         </view>
     </block>
+    <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/contacts/contacts">
+      <!-- <view class="fui-cell-icon">
+          <text class="icox icox-details"></text>
+      </view> -->
+      <view class="fui-cell-text">我的人脉</view>
+      <view class="fui-cell-remark"style="color:#888888"></view>
+  </navigator>
      <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/code/code">
       <!-- <view class="fui-cell-icon">
           <text class="icox icox-details"></text>
       </view> -->
       <view class="fui-cell-text">我的收款码</view>
-      <view class="fui-cell-remark"style="color:#888888">查看</view>
+      <view class="fui-cell-remark"style="color:#888888"></view>
   </navigator>
 </view>
 

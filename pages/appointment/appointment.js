@@ -6,20 +6,18 @@ Page({
    */
   data: {
     address:'中山路129-3号柏威年购物广场3层东区L3060层（东区L3060）',
-    phone:'400-000-000',
+    phone:'39857780',
     list:[
       {
         img:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto1.png',
-        teacher:'Suny老师',
-        title:'店长'
+        teacher:'冷基林',
+        title:'发型师',
+        tele:'18525328308'
       }, {
         img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto2.png',
-        teacher: 'David老师',
-        title: '艺术总监'
-      }, {
-        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto3.png',
-        teacher: 'Bill老师',
-        title: '资深总监'
+        teacher: '周龙',
+        title: '发型师',
+        tele:'13664289496'
       }
     ],
   },
@@ -32,7 +30,7 @@ Page({
   },
   madeCall:function(){
     wx.makePhoneCall({
-      phoneNumber: '400-000-000' // 仅为示例，并非真实的电话号码
+      phoneNumber: '39857780' // 仅为示例，并非真实的电话号码
     })
   },
   goAddress:function(){
@@ -47,6 +45,13 @@ Page({
           address: '中山广场A地铁口'
         })
       }
+    })
+  },
+  callTele:function(e){
+    console.log(e.currentTarget.dataset.tele)
+    const te = e.currentTarget.dataset.tele;
+    wx.makePhoneCall({
+      phoneNumber: te // 仅为示例，并非真实的电话号码
     })
   },
   /**

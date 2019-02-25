@@ -4,7 +4,7 @@
     "pages/index/index",
     "pages/member/index/index",
     "pages/code/code",
-    
+    "pages/contacts/contacts",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
     "pages/promotionCode/promotionCode",

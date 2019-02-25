@@ -31,7 +31,7 @@
             <rich-text style='color:#666'>{{item.title}}</rich-text>
           </view>
           <view class='unit_btn'>
-            <button class='mini_btn' >预约</button>
+            <button class='mini_btn' data-tele="{{item.tele}}" bindtap='callTele'>预约</button>
           </view>
         </view>
         

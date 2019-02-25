@@ -284,7 +284,7 @@ App({
 
                   // }
                   wx.setStorageSync('oi', a.openid)
-                  that.getttRole()
+                  // that.getttRole()
                   // console.log('!!!!!!!!!!!!!!!!!!!!!')
                     a.error ? e.alert("获取用户登录态失败:" + a.message) : a.isclose && n && "function" == typeof n ? n(a.closetext, !0) : wx.getUserInfo({
                       

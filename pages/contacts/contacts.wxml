@@ -1,0 +1,4 @@
+<!--pages/contacts/contacts.wxml-->
+<view class='memberBenefits'>
+  <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/contacts.png' mode='widthFix'  ></image>
+</view>
