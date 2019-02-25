@@ -1,0 +1,4 @@
+<!--pages/code/code.wxml-->
+<view class='memberBenefits'>
+  <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/erweima.png' mode='widthFix'  ></image>
+</view>
