@@ -30,7 +30,25 @@ Page({
   onLoad: function (options) {
 
   },
-
+  madeCall:function(){
+    wx.makePhoneCall({
+      phoneNumber: '400-000-000' // 仅为示例，并非真实的电话号码
+    })
+  },
+  goAddress:function(){
+    wx.getLocation({//获取当前经纬度
+      type: 'wgs84', //返回可以用于wx.openLocation的经纬度，官方提示bug: iOS 6.3.30 type 参数不生效，只会返回 wgs84 类型的坐标信息  
+      success: function (res) {
+        console.log('ssss',res)
+        wx.openLocation({//​使用微信内置地图查看位置。
+          latitude: 38.91864,//要去的纬度-地址
+          longitude: 121.64511,//要去的经度-地址
+          name: "中山广场店",
+          address: '中山广场A地铁口'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -90,35 +90,40 @@
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#ff5555",
+    "selectedColor": "#9dd6da",
     "borderStyle": "white",
     "backgroundColor": "#f7f7fa",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/images/tabbar/icon-1.png",
-        "selectedIconPath": "static/images/tabbar/icon-1-active.png"
+        "iconPath": "static/images/tabbar/a1.png",
+        "selectedIconPath": "static/images/tabbar/b1.png"
       },
       {
         "pagePath": "pages/appointment/appointment",
-        "text": "预存",
-        "iconPath": "static/images/tabbar/icon-4.png",
-        "selectedIconPath": "static/images/tabbar/icon-4-active.png"
+        "text": "预约",
+        "iconPath": "static/images/tabbar/a2.png",
+        "selectedIconPath": "static/images/tabbar/b2.png"
       },
       {
         "pagePath": "pages/goods/index/index",
         "text": "全部商品",
-        "iconPath": "static/images/tabbar/icon-2.png",
-        "selectedIconPath": "static/images/tabbar/icon-2-active.png"
+        "iconPath": "static/images/tabbar/a3.png",
+        "selectedIconPath": "static/images/tabbar/b3.png"
       },
       {
         "pagePath": "pages/member/index/index",
         "text": "会员中心",
-        "iconPath": "static/images/tabbar/icon-5.png",
-        "selectedIconPath": "static/images/tabbar/icon-5-active.png"
+        "iconPath": "static/images/tabbar/a4.png",
+        "selectedIconPath": "static/images/tabbar/b4.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "subPackages": [
     {

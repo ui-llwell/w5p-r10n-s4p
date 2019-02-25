@@ -1,7 +1,7 @@
 <!--pages/appointment/appointment.wxml-->
 <view class='appointment'>
   <view class='shop'>
-    <view class='shop_adress'>
+    <view class='shop_adress' bindtap='goAddress'>
       <image 
      class='shop_adress_img' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_map.png' mode="widthFix"></image> 
      <view class='shop_adress_word'>
@@ -16,7 +16,7 @@
         <text>电话：{{phone}}</text>
       </view>
       <image 
-      class='shop_phone_phone' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_phone.png' mode="widthFix"></image> 
+      class='shop_phone_phone' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/hair_phone.png' mode="widthFix" bindtap='madeCall'></image> 
     </view>
   </view>
   <view class='list' >
