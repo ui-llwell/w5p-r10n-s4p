@@ -103,6 +103,7 @@
         <include src="/pages/diy/template/tpl_seckillgroup.wxml"></include>
     </block>
 </block>
+<!-- 个人中心头像等上半部分模板 -->
 <block>
     <block wx:if="{{diyitem.id=='member'}}">
         <include src="/pages/diy/template/tpl_memberhead.wxml"></include>

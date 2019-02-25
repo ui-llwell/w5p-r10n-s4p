@@ -79,7 +79,7 @@
   border-radius: 10rpx;
   position: absolute;
   z-index: 110;
-  bottom: 20rpx;
+  bottom: 0rpx;
   left: 0;
   right: 0;
   margin: auto;
