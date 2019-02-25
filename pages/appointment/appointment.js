@@ -9,17 +9,17 @@ Page({
     phone:'400-000-000',
     list:[
       {
-        img:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/photo.png',
-        teacher:'MMM老师',
-        title:'艺术总监'
+        img:'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto1.png',
+        teacher:'Suny老师',
+        title:'店长'
       }, {
-        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/photo.png',
-        teacher: 'MMM老师',
+        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto2.png',
+        teacher: 'David老师',
         title: '艺术总监'
       }, {
-        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/photo.png',
-        teacher: 'MMM老师',
-        title: '艺术总监'
+        img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/Hairdressing/headPhoto3.png',
+        teacher: 'Bill老师',
+        title: '资深总监'
       }
     ],
   },
