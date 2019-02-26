@@ -354,12 +354,17 @@
 }
 
 .fui-cell-group {
+    margin:0 26rpx 0;
+    border-radius:10rpx;
+
     margin-top: 20rpx;
     background-color: #fff;
     line-height: 1.4;
     font-size: 32rpx;
     overflow: hidden;
     position: relative;
+    
+
 }
 
 .fui-cell-group.fui-cell-group-o {

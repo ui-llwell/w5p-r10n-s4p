@@ -5,7 +5,7 @@
 </block>
 <block>
     <block wx:if="{{show}}">
-        <view class="page navbar">
+        <view class="page ">
             <view class="category-search">
                 <view class="weui-flex">
                     <view class="weui-flex__item category-search-form">

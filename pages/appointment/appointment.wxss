@@ -5,6 +5,7 @@
 .shop{
   background: #fff;
   font-size: 28rpx;
+  border-radius: 10rpx;
   /* overflow: hidden; */
 }
 .shop_adress,.shop_phone{
@@ -38,6 +39,7 @@
 .list{
   background: #fff;
   margin-top: 20rpx;
+  border-radius: 10rpx;
 }
 
 .list_unit{
