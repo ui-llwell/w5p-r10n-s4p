@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
-	"appid": "wx212d522fca71351b",
+	"libVersion": "2.6.1",
+	"appid": "wxe75deae63a3b1fc2",
 	"projectname": "w5p-r10n-s4p",
 	"debugOptions": {
 		"hidedInDevtools": []
