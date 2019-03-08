@@ -10,7 +10,7 @@
   </view>
   <view class='iphone'>
     <view class='iphone_left'>
-      卡号 <input type='number' name='bankCardCode' value='{{bankCardCode}}' maxlength='16' bindinput='numberInput'  placeholder='请输入持卡人银行卡号'></input>
+      卡号 <input type='number' name='bankCardCode' value='{{bankCardCode}}' maxlength='21' bindinput='numberInput'  placeholder='请输入持卡人银行卡号'></input>
     </view>
   </view>
   <view class='iphone'>
