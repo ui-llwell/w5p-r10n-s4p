@@ -1,15 +1,10 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/myIncome/myIncome",
     "pages/myQrcode/myQrcode",
     "pages/agreement/agreement",
     "pages/modifyBankcard/modifyBankcard",
-    
-    
-    
-
     "pages/custom/index",
     "pages/creditshop/detail/index",
     "pages/creditshop/comment/index",
@@ -86,7 +81,7 @@
   "tabBar": {
     "color": "#999999",
     "selectedColor": "#ff5555",
-    "borderStyle": "",
+    "borderStyle": "white",
     "backgroundColor": "#f7f7fa",
     "list": [
       {
@@ -100,12 +95,6 @@
         "text": "全部商品",
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
-      },
-      {
-        "pagePath": "pages/scan/scan",
-        "text": "扫一扫",
-        "iconPath": "static/images/tabbar/icon-f3.png",
-        "selectedIconPath": "static/images/tabbar/icon-f3-active.png"
       },
       {
         "pagePath": "pages/member/cart/index",
@@ -200,5 +189,6 @@
       ]
     }
   ],
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }
