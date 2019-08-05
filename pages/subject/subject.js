@@ -62,5 +62,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  binderror: function (res) {
+    console.log(res);
   }
 })

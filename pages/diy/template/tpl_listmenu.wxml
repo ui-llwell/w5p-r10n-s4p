@@ -26,6 +26,13 @@
       <view class="fui-cell-text">我的邀请码</view>
       <view class="fui-cell-remark"style="color:#888888"></view>
   </navigator>
+  <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/subject/subject">
+      <!-- <view class="fui-cell-icon">
+          <text class="icox icox-details"></text>
+      </view> -->
+      <view class="fui-cell-text">店铺管理</view>
+      <view class="fui-cell-remark"style="color:#888888"></view>
+  </navigator>
 </view>
 
 
