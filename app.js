@@ -382,8 +382,8 @@ App({
     },
     globalData: {
       appid: "wx9e9d6f06811f80d8",
-      api: "https://eshop.llwell.net/app/ewei_shopv2_api.php?i=15",
-      approot: "https://eshop.llwell.net/addons/ewei_shopv2/",
+      api: "https://m.a-cubic.com/app/ewei_shopv2_api.php?i=16",
+      approot: "https://m.a-cubic.com/addons/ewei_shopv2/",
         userInfo: null
     }
 });

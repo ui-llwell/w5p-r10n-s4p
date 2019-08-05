@@ -91,7 +91,7 @@
         "selectedIconPath": "static/images/tabbar/icon-1-active.png"
       },
       {
-        "pagePath": "pages/goods/index/index",
+        "pagePath": "pages/shop/caregory/index",
         "text": "全部商品",
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
