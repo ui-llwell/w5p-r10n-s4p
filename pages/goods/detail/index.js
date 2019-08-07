@@ -475,29 +475,46 @@ Page((a = {
         }), e.setData({
             uid: t.id
         });
-        o.getUserInfo(function() {
+        e.setData({
+          options: t
+        }), wx.getSystemInfo({
+          success: function (t) {
             e.setData({
-                options: t
-            }), wx.getSystemInfo({
-                success: function(t) {
-                    e.setData({
-                        advWidth: t.windowWidth
-                    }), console.log(t.windowHeight);
-                }
-            }), e.setData({
-                success: !0,
-                cover: !0,
-                showvideo: !0
-            }), e.getDetail(t), setTimeout(function() {
-                e.setData({
-                    areas: o.getCache("cacheset").areas
-                });
-            }, 3e3);
-        }, function() {
-            wx.redirectTo({
-                url: "/pages/message/auth/index"
-            });
-        });
+              advWidth: t.windowWidth
+            }), console.log(t.windowHeight);
+          }
+        }), e.setData({
+          success: !0,
+          cover: !0,
+          showvideo: !0
+        }), e.getDetail(t), setTimeout(function () {
+          e.setData({
+            areas: o.getCache("cacheset").areas
+          });
+        }, 3e3);
+        // o.getUserInfo(function() {
+        //     e.setData({
+        //         options: t
+        //     }), wx.getSystemInfo({
+        //         success: function(t) {
+        //             e.setData({
+        //                 advWidth: t.windowWidth
+        //             }), console.log(t.windowHeight);
+        //         }
+        //     }), e.setData({
+        //         success: !0,
+        //         cover: !0,
+        //         showvideo: !0
+        //     }), e.getDetail(t), setTimeout(function() {
+        //         e.setData({
+        //             areas: o.getCache("cacheset").areas
+        //         });
+        //     }, 3e3);
+        // }, function() {
+        //     wx.redirectTo({
+        //         url: "/pages/message/auth/index"
+        //     });
+        // });
     },
     show_cycelbuydate: function() {
         var t = this, e = g.getCurrentDayString(this, t.data.showDate), a = [ "周日", "周一", "周二", "周三", "周四", "周五", "周六" ];

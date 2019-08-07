@@ -30,7 +30,7 @@ Page({
                 userInfo: a
               })
             }, function (e, t) {
-              // console.log(1312312312312312, e, t);
+              console.log("1111111111111111111111111111111111");
              
             });
             // a && (wx.reLaunch({
@@ -38,6 +38,10 @@ Page({
             // }), clearInterval(e), t.setData({
             // userInfo: a
             // }));
+          } else{
+            wx.reLaunch({
+              url: "/pages/index/index"
+            })
           }
         }
       });

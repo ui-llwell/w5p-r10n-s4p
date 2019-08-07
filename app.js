@@ -8,15 +8,14 @@ App({
       var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
       if (!isDebug) {
         //远程域名
-        wx.setStorageSync('domainName', "https://eshop.llwell.net/llback/Api/")
+        wx.setStorageSync('domainName', "https://oms.a-cubic.com/llback/Api/")
       }
       else {
         //本地测试域名
         // wx.setStorageSync('domainName', "http://192.168.0.11:53695/api/analysis/Wx/")
       }
-
       //  console.log('option.query', option.query)
-      if(option.query!=undefined){
+      if (option.query != undefined){
         this.needData.agent = option.query.agent
         this.needData.bbcode = option.query.bbcode
       }
@@ -106,7 +105,7 @@ App({
         appId: this.globalData.appid
       }
       // console.log('params', params)
-      let url = 'https://eshop.llwell.net/llback/Api/BindingWXAPP'
+      let url = 'https://oms.a-cubic.com/llback/Api/BindingWXAPP'
       wx.request({
         url: url,
         data: params,
@@ -304,9 +303,9 @@ App({
                             });
                         },
                         fail: function() {
-                          wx.redirectTo({
-                            url: "/pages/message/auth/index"
-                          });
+                          // wx.redirectTo({
+                          //   url: "/pages/message/auth/index"
+                          // });
 
                             // console.log(a), e.get("wxapp/check", {
                             //     openid: a.openid

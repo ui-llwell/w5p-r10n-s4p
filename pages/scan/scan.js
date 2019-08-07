@@ -19,10 +19,10 @@ Page({
       wx.scanCode({
         success: (res) => {
           var send = {
-            code: 15,
+            code: 16,
             barcode: res.result
           };
-          let url = 'https://eshop.llwell.net/llback/Scan/SCANGOODSURL'
+          let url = 'https://oms.a-cubic.com/llback/Scan/SCANGOODSURL'
           wx.request({
             url: url,
             data: send,

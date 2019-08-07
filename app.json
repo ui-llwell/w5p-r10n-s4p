@@ -92,7 +92,7 @@
       },
       {
         "pagePath": "pages/shop/caregory/index",
-        "text": "全部商品",
+        "text": "商品分类",
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
       },
@@ -190,5 +190,6 @@
     }
   ],
   "debug": false,
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList":["wxc5f7fb1d2e64c423"]
 }
